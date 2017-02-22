@@ -8,7 +8,7 @@ Y = np.array([1, 1, 1, 2, 2, 2])
 clf = GaussianNB()			#declaring a classifier
 clf.fit(X, Y)				#training the classifier using the above dataset
 
-p = [-1.2, -0.9]
+p = [-1.2, 1.9]
 pred = clf.predict([p])		#predict the class to which the point belongs
 
 print pred 					#print the predicted class
