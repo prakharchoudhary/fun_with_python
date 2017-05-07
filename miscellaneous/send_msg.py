@@ -1,9 +1,9 @@
 from twilio.rest import TwilioRestClient
 #twilio is a python package we will use for this simple script(install twilio in windows usiong "pip install twilio" in command line)
 
-#you need to sign up on www.twilio.com/try-twilio to get th etwo below fields
+#you need to sign up on www.twilio.com/try-twilio to get the the account_sid and auth_token
 account_sid = "ACe0eb3b561e800b2ca6c9a724beb53ce0"
-auth_token = "*********************"	#this is not my auth_key, i did it bcz leaving blank fields looks wierd.
+auth_token = "*********************"	#this is not my auth_key, i did it bcz leaving blank fields looks weird.
 client = TwilioRestClient(account_sid, auth_token)
 
 message = client.sms.messages.create(
