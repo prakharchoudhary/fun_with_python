@@ -33,7 +33,7 @@ class Perceptron(object):
 		--------------------------------------
 		X : {array-like}, shape = [n_samples, n_features]
 			Training vectors, where n_samples
-			is the number of samples and
+			is the numpymber of samples and
 			n_features is the number of features.
 
 		y: array-like, shape = [n_samples]
