@@ -4,11 +4,13 @@ import httplib2
 
 import sys
 import codecs
+from secret_keys import *
+
 sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 sys.stderr = codecs.getwriter('utf8')(sys.stderr)
 
-foursquare_client_id = "G5OVDCZTDDJB240N0APPHU01XSIDSIYA4TKEOONBVTQHJUZL"
-foursquare_client_secret = "NVP31UAINEMZBY2PKO1XUNYXRKOPMTNSJTLXFYNLI2EDIECF"
+foursquare_client_id = FOURSQUARE_CLIENT_ID
+foursquare_client_secret = FOURSQUARE_CLIENT_SECRET
 
 
 def findARestaurant(mealType,location):
