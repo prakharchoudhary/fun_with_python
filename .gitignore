@@ -1,1 +1,4 @@
 *.pyc
+
+# API keys file
+secret_keys.py
