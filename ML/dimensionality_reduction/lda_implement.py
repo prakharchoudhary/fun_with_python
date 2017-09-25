@@ -91,7 +91,7 @@ def exp_var_ratio(eigen_vals):
 	plt.xlabel('Linear Discriminants')
 	plt.ylim([-0.1, 1.1])
 	plt.legend(loc='best')
-	plt.savefig('./explained-varince-ratio(lda).png', dpi=200)
+	plt.savefig('./chart/explained-varince-ratio(lda).png', dpi=200)
 	# plt.show()
 
 '''
@@ -119,7 +119,7 @@ def lda_transform_plot(X_train_std):
 	plt.ylabel('LD 2')
 	plt.legend(loc='upper right')
 	# plt.show()
-	plt.savefig('./lda-transform-features.png', dpi=250)
+	plt.savefig('./chart/lda-transform-features.png', dpi=250)
 
 
 options = '''

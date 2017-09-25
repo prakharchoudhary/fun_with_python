@@ -43,7 +43,7 @@ def var_exp_ratio(eigen_vals, eigen_vecs):
 	plt.xlabel('Principal components')
 	plt.legend(loc='best')
 	# plt.show()
-	plt.savefig('./explained-variance-ratio.png', dpi=250)
+	plt.savefig('./chart/explained-variance-ratio.png', dpi=250)
 
 #################################################################################
 # FEATURE TRANSFORMATION
@@ -87,7 +87,7 @@ def plot_pca_transform(X_train_pca):
 	plt.xlabel('PC 1')
 	plt.ylabel('PC 2')
 	plt.legend(loc='lower left')
-	plt.savefig('./pca-transform-features.png', dpi=250)
+	plt.savefig('./chart/pca-transform-features.png', dpi=250)
 
 def main():
 
