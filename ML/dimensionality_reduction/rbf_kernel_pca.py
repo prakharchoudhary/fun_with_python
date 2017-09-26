@@ -3,7 +3,7 @@ from scipy import exp
 from scipy.linalg import eigh
 import numpy as np
 
-def rbf_kernel_pca(X, gamma, n_components):
+def rbf_kernel_pca(X, gamma, n_components, eig=False):
 	'''
 	RBF kernel PCA implementation.
 
@@ -22,6 +22,8 @@ def rbf_kernel_pca(X, gamma, n_components):
 	X_pc: {NumPy ndarray}, shape = [n_samples, k_features]
 		Projected dataset
 
+	lambdas: list
+		Eigenvalues
 	'''
 	# Calculate pairwise squared Euclidean distance
 	# in thhe MxN dimensional dataset.
@@ -43,7 +45,11 @@ def rbf_kernel_pca(X, gamma, n_components):
 	eigvals, eigvecs = eigh(K)
 
 	# Collect the top k eigenvectors (projected samples)
-	X_pc = np.column_stack((eigvecs[:, -i]
+	alphas = np.column_stack((eigvecs[:, -i]
 							for i in range(1, n_components + 1)))
 	
-	return X_pc
+	if eig:
+		lambdas = [eigvals[-i] for i in range(1, n_components+1)]
+		return alphas, lambdas
+
+	return alphas
