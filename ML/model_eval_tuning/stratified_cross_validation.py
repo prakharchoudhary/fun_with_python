@@ -30,10 +30,11 @@ for k, (train, test) in enumerate(kfold):
 print('CV accuracy: %.3f +/- %.3f' % (np.mean(scores), np.std(scores)))
 
 ############################### using scikit-learn to calculate #########################################
+print("\n" + "#"*100 + "\n")
 scores = cross_val_score(estimator=pipe_lr,
                          X=X_train,
                          y=y_train,
                          cv=10,
                          n_jobs=1)
-print('CV accuracy scores: %s' % scores)
+print('CV accuracy scores(using sklearn cross_val_score):\n%s' % scores)
 print('CV accuracy: %.3f +/- %.3f' % (np.mean(scores), np.std(scores)))
