@@ -23,4 +23,6 @@ for i in li:
 
 pprint.pprint(links)
 
-pdfkit.from_url(links, "DLBook.pdf")
+for link in links:
+	link = link.split('/')
+	pdfkit.from_url(link, link[len(link)-1].split('.')[0]+".pdf")
