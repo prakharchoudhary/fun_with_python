@@ -2,3 +2,13 @@
 
 # API keys file
 secret_keys.py
+
+# images
+*.png
+*.bmp
+*.jpeg
+*.jpg
+
+# video files
+*.mp4
+*.avi
