@@ -100,8 +100,8 @@ def main():
     else:
         s = input("Enter the search term: ").split(' ')
         searchFor = GoogleScraper(search=s)
-        if not os.path.exists('./{}'.format(s)):
-            os.mkdir('./{}'.format(s))
+        if not os.path.exists('./{}'.format(' '.join(s))):
+            os.mkdir('./{}'.format(' '.join(s)))
 
     searchFor.write_all_images()
 
