@@ -13,14 +13,17 @@ def time_elapsed(t):
 	"""
 	count = t
 	interval = t // 60
-	ticker = 1
+	ticker = 0 
+	bar = 0
 	while(count):
-		sys.stdout.write("\r [{}{}]: {}%".format("#"*(ticker), "-"*(60-ticker), (ticker*100)/60))
+		if ticker % interval == 0:
+			bar += 1
+		sys.stdout.write("\r [{}{}]: {}%".format("#"*(bar), "-"*(60-bar), (bar*100)/60))
 		sys.stdout.flush()
 		count -= interval
 		ticker += interval
 		time.sleep(interval)
-	print "\nCurrent time: " + datetime.datetime.now().strftime('%I:%M:%S %p')
+	print "\nCurrent timen: " + datetime.datetime.now().strftime('%I:%M:%S %p')
 
 def timer(t):
 	t = t * 60
