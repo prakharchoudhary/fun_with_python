@@ -11,7 +11,8 @@ while name != 'q':
 	name = raw_input("Enter the name or press q to exit: ")
 
 	def gender_check(x):
-		result = urllib.urlopen("https://gender-api.com/get?name={}&key=pTZxsHjhJaKTzCVMAg".format(x))
+		key = "" #define key
+		result = urllib.urlopen("https://gender-api.com/get?name={}&key={}".format(x, key))
 		objects = result.read()
 		real_obj = ast.literal_eval(objects)
 		print real_obj['gender']
